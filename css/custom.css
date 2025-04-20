@@ -1,0 +1,334 @@
+/********************
+ACCORDION BASE STYLES
+-edit look of accordion here
+********************/
+.mwd-header {
+    font-size: 30px;
+  }
+  
+  .mwd-accordion {
+    margin: 30px 0;
+  }
+  
+  .mwd-accordion .mwd-accordion-item {
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+  }
+  .mwd-accordion .mwd-accordion-item .mwd-accordion-title {
+    font-size: 24px;
+    background: #00447c;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .mwd-accordion .mwd-accordion-item .mwd-accordion-content {
+    color: black;
+    padding: 20px 20px 0 20px;
+  }
+  .mwd-accordion .mwd-accordion-item .mwd-accordion p {
+    margin: 0;
+  }
+  
+  /********************
+  BASE +/- STYLES
+  ********************/
+  .mwd-accordion-content {
+    display: block;
+    overflow: hidden;
+    max-height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mwd-accordion-title > :first-child {
+    max-width: 90%;
+  }
+  
+  .mwd-accordion-title {
+    position: relative;
+  }
+  .mwd-accordion-title .mwd-accordion-icon {
+    position: absolute;
+    background: white;
+    width: 20px;
+    height: 3px;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  .mwd-accordion-title .mwd-accordion-icon:after {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 3px;
+    height: 20px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .active .mwd-accordion-icon:after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+/* Responsive Table Styles */
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: none;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: none;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* Nav Dropdowns */
+
+.navContent ul li ul a {
+    white-space: normal !important;
+    overflow: visible !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .navContent ul li ul {
+        min-width: 250px !important;
+        right: auto !important; 
+    }
+}
+
+/* Responsive Inline Simple List */
+
+@media only screen and (max-width: 767px) {
+  .listView.vAlgn1 .itemPreview.hasImg, 
+ .listView.vAlgn2 .itemPreview.hasImg {
+        display: block;
+    }
+    
+ .listView .itemPreview.hasImg .itemImg {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+ .listView .itemPreview.hasImg .itemContent {
+        width: 100%;
+    }
+}
+
+/*floating reciteme button*/
+
+ #reciteme-button {
+            /* Button Styling and Placement */
+            /*background: #00344c;*/
+            width: 100px;
+            height: 100px;
+            bottom: 14px;
+            right: 14px;
+
+            position: fixed;
+            border-radius: 50%;
+            z-index: 100;
+            cursor: pointer;
+        }
+        /*#reciteme-button:hover {*/
+            /* Hover Color */
+        /*    background: #e9322e;*/
+        /*}*/
+        #reciteme-button img {
+            /** Button Image Size */
+            width: 90px;
+            height: 90px;
+            filter: drop-shadow(1px 1px 7px gray);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        button#enableRecite:hover {
+            color: red;
+            background: white;
+        }
+        button#enableRecite {
+            background: red;
+            font-size: 26px;
+            border-color: red;
+        }
+        
+        button#enableRecite {
+    background: red;
+    font-size: 18px;
+    border-color: red;
+    padding: 4.5px 18px;
+    margin-left: 15px;
+}
+
+/* Popup Styles */
+
+.dismiss{
+    cursor: pointer;
+}
+
+/* Delete code below this line to inherit sitewide styles for text and button */
+
+.popupButton {
+    background: #000000;
+    color: #fff!important;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.popupButton:hover {
+    background: #eeeeee;
+    color: #fff!important;
+}
+
+.popupTitle {
+    font-size: 60px;
+    color: #000000;
+    margin-top: 20px;
+    line-height: .05;
+    padding-bottom: 0;
+}
+
+/* End Popup Styles */
+
+/* Give the Gift of Advocay Popup*/
+.mad-popup-wrap {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 76%);
+    z-index: 9999;
+}
+
+.mad-popup-wrap.show{
+  display:block;
+}
+
+.mad-popup-content img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.mad-popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    min-width: 500px;
+    text-align: center;
+}
+
+.mad-popup-wrap .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    min-width: 30px;
+    cursor: pointer;
+}
+
+.mad-popup-text {
+    padding: 15px;
+}
+
+.mad-popup-wrap p.popup-header {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.mad-popup-wrap p.popup-subheader {
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width: 550px){
+  .mad-popup-box {
+        min-width: 90%;
+        top: 12rem;
+        transform: translate(-50%);
+    }
+}
+
+a.moreLink {
+    color: black !important;
+}
